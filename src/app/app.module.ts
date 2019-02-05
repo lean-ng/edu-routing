@@ -24,8 +24,12 @@ import { TodosModule } from './todos/todos.module';
     BrowserModule,
     ClarityModule,
     BrowserAnimationsModule,
+
+    // Feature Modules
+    TodosModule,
+
+    // App Routing - last here due to wildcard route
     AppRoutingModule,
-    TodosModule
   ],
   providers: [],
   bootstrap: [AppComponent]
