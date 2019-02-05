@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { TodoShellComponent } from './todo-shell/todo-shell.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: 'todos', component: TodoShellComponent }
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
