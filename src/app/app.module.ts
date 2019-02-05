@@ -12,6 +12,7 @@ import { ErrorNotFoundComponent } from './pages/error-not-found/error-not-found.
 
 import { appRoutes } from './app-routes';
 import { environment } from 'src/environments/environment';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { environment } from 'src/environments/environment';
       enableTracing: !environment.production
     }),
     ClarityModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
