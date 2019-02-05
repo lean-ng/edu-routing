@@ -10,6 +10,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { ErrorNotFoundComponent } from './pages/error-not-found/error-not-found.component';
 
 import { AppRoutingModule } from './app-routing.module';
+import { TodosModule } from './todos/todos.module';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { AppRoutingModule } from './app-routing.module';
     BrowserModule,
     ClarityModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    TodosModule
   ],
   providers: [],
   bootstrap: [AppComponent]
