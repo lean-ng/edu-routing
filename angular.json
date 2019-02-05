@@ -136,5 +136,8 @@
       }
     }
   },
-  "defaultProject": "edu-routing"
+  "defaultProject": "edu-routing",
+  "cli": {
+    "packagemanager": "npm"
+  }
 }
