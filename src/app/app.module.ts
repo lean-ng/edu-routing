@@ -28,11 +28,11 @@ import { LinksModule } from './links/links.module';
 
     // Feature Modules
     TodosModule,
+    LinksModule,
 
     // App Routing - last here due to wildcard route
     AppRoutingModule,
 
-    LinksModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

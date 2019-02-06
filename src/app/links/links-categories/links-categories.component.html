@@ -1,0 +1,11 @@
+<nav class="sidenav">
+  <section class="sidenav-content">
+      <section class="nav-group">
+          <input id="tab1" type="checkbox">
+          <label for="tab1">Kategorien</label>
+          <ul class="nav-list">
+              <li *ngFor="let c of categories"><a [routerLink]="[c.id]" class="nav-link">{{ c.name }}</a></li>
+          </ul>
+      </section>
+  </section>
+</nav>
