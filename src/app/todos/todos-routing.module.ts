@@ -3,7 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { TodoShellComponent } from './todo-shell/todo-shell.component';
 
 const routes: Routes = [
-  { path: 'todos', component: TodoShellComponent }
+  { path: 'todos', component: TodoShellComponent },
+  { path: 'todos/:filter', component: TodoShellComponent }
 ];
 
 @NgModule({

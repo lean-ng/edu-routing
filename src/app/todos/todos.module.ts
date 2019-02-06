@@ -3,9 +3,10 @@ import { CommonModule } from '@angular/common';
 
 import { TodosRoutingModule } from './todos-routing.module';
 import { TodoShellComponent } from './todo-shell/todo-shell.component';
+import { TodoListComponent } from './todo-list/todo-list.component';
 
 @NgModule({
-  declarations: [TodoShellComponent],
+  declarations: [TodoShellComponent, TodoListComponent],
   imports: [
     CommonModule,
     TodosRoutingModule

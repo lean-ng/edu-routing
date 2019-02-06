@@ -1,1 +1,9 @@
-<h1>Todos</h1>
+<div class="clr-row">
+    <div class="clr-col-10">
+        <h1>Todos</h1>
+    </div>
+    <div class="clr-col-2">
+        <button (click)="goHome()" class="btn btn-outline">Back to Home</button>
+    </div>
+</div>
+<todo-list [filter]="filter"></todo-list>

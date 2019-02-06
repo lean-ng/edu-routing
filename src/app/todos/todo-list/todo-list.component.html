@@ -1,0 +1,19 @@
+<div class="clr-row">
+  <div class="clr-col-12">
+      <div class="card">
+          <div class="card-header">
+              {{ filter ? filter : 'All' }} todos
+          </div>
+          <div class="card-block">
+              <div class="card-text">
+                  ...
+              </div>
+          </div>
+          <div class="card-footer">
+              <a routerLink="/todos" routerLinkActive="btn-primary" [routerLinkActiveOptions]="{ exact: true }" class="btn active">Show All</a>
+              <a routerLink="/todos/active" routerLinkActive="btn-primary" class="btn">Show Active</a>
+              <a routerLink="/todos/completed" routerLinkActive="btn-primary" class="btn">Show completed</a>
+          </div>
+      </div>
+  </div>
+</div>
