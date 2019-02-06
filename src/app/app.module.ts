@@ -11,6 +11,7 @@ import { ErrorNotFoundComponent } from './pages/error-not-found/error-not-found.
 
 import { AppRoutingModule } from './app-routing.module';
 import { TodosModule } from './todos/todos.module';
+import { LinksModule } from './links/links.module';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,8 @@ import { TodosModule } from './todos/todos.module';
 
     // App Routing - last here due to wildcard route
     AppRoutingModule,
+
+    LinksModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
