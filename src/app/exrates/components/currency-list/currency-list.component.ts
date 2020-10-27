@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { RatesAPIService } from '../../rates-api.service';
 
 @Component({
   selector: 'ex-currency-list',
@@ -7,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CurrencyListComponent implements OnInit {
 
-  constructor() { }
+  currencies$: Observable<string[]>;
+
+  constructor(private api: RatesAPIService) {
+    this.currencies$ = api.getCurrencies();
+  }
 
   ngOnInit(): void {
   }

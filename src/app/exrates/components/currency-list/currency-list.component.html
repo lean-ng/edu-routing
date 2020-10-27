@@ -1,1 +1,6 @@
-<p>currency-list works!</p>
+<h2>Choose a currency</h2>
+<div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
+  <a *ngFor="let c of currencies$ | async" class="btn btn-outline">
+    {{ c }}
+  </a>
+</div>
