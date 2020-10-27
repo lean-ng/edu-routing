@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
+import { map, switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'ex-currency-rates',
@@ -7,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CurrencyRatesComponent implements OnInit {
 
-  constructor() { }
+  currency$: Observable<string>;
+
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.currency$ = this.route.paramMap.pipe(
+      map(params => params.get('currency'))
+    );
   }
 
 }
