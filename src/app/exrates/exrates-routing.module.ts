@@ -5,7 +5,7 @@ import { CurrencyRatesComponent } from './components/currency-rates/currency-rat
 
 const routes: Routes = [
   { path: 'exrates/currencies', component: CurrencyListComponent },
-  { path: 'exrates/rates', component: CurrencyRatesComponent }
+  { path: 'exrates/rates/:currency', component: CurrencyRatesComponent }
 ];
 
 @NgModule({
