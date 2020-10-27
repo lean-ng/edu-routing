@@ -13,6 +13,7 @@ import { NotFoundComponent } from './core/components/not-found/not-found.compone
 const appRoutes: Route[] = [
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
+  { path: '',   redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: NotFoundComponent },
 ];
 
