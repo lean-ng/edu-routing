@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "edu-routing"
+    }
+  },
+  "defaultProject": "edu-routing",
+  "cli": {
+    "analytics": false
+  }
 }
