@@ -23,8 +23,8 @@ import { ExratesModule } from './exrates/exrates.module';
     BrowserModule,
     ClarityModule,
     BrowserAnimationsModule,
+    ExratesModule,
     AppRoutingModule,
-    ExratesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
