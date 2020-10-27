@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, ReplaySubject } from 'rxjs';
 import { RatesResponse } from './model/rates-response.interface';
@@ -23,5 +23,10 @@ export class RatesAPIService {
       ).subscribe(this.currencies$);
     }
     return this.currencies$;
+  }
+
+  getRates(base: string): Observable<RatesResponse> {
+    const params = new HttpParams().set('base', base);
+    return this.http.get<RatesResponse>(baseUrl, {params});
   }
 }
