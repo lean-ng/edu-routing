@@ -8,6 +8,7 @@
     <div class="header-nav" [clr-nav-level]="1">
       <a routerLink="/home" routerLinkActive="active" class="nav-link nav-text">Home</a>
       <a routerLink="/exrates/currencies" routerLinkActive="active" class="nav-link nav-text">ExRates</a>
+      <a routerLink="/crisis-center" routerLinkActive="active" class="nav-link nav-text">Crisis Center</a>
       <a routerLink="/about" routerLinkActive="active" class="nav-link nav-text">About</a>
     </div>
     <div class="header-actions">
@@ -16,9 +17,7 @@
       </a>
     </div>
   </clr-header>
-  <div class="content-container">
-    <main>
+  <main class="content-container">
       <router-outlet></router-outlet>
-    </main>
-  </div>
+  </main>
 </clr-main-container>

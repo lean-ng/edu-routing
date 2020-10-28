@@ -1,0 +1,13 @@
+.container-resembled {
+  display: flex;
+  flex: 1 1 auto;
+  height: 100%;
+}
+
+.sidenav-resembled {
+  flex: 0 0 auto;
+  order: -1;
+  overflow: hidden;
+  height: 100%;
+
+}
