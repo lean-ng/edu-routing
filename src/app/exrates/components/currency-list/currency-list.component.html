@@ -1,9 +1,9 @@
-<h2>Choose a currency</h2>
-<div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
-  <a *ngFor="let c of currencies$ | async"
-    [ngClass]="c === selectedCurrency ? 'btn btn-primary' : 'btn btn-outline'"
-    [routerLink]="['/exrates/rates', c]"
-  >
-    {{ c }}
-  </a>
+<div class="content-area">
+  <h2>Choose a currency</h2>
+  <div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
+    <a *ngFor="let c of currencies$ | async" [ngClass]="c === selectedCurrency ? 'btn btn-primary' : 'btn btn-outline'"
+      [routerLink]="['/exrates/rates', c]">
+      {{ c }}
+    </a>
+  </div>
 </div>

@@ -1,21 +1,23 @@
-<header>
-  <h2>Current Rates for {{ (rates$ | async)?.base }} ({{ (rates$ | async)?.date | date }})</h2>
-  <a (click)="gotoList()" class="btn btn-primary">Back</a>
-</header>
-<clr-datagrid>
-  <clr-dg-column [clrDgField]="'key'">Currency</clr-dg-column>
-  <clr-dg-column [clrDgField]="'value'">Rate</clr-dg-column>
+<div class="content-area">
+  <header>
+    <h2>Current Rates for {{ (rates$ | async)?.base }} ({{ (rates$ | async)?.date | date }})</h2>
+    <a (click)="gotoList()" class="btn btn-primary">Back</a>
+  </header>
+  <clr-datagrid>
+    <clr-dg-column [clrDgField]="'key'">Currency</clr-dg-column>
+    <clr-dg-column [clrDgField]="'value'">Rate</clr-dg-column>
 
-  <clr-dg-row *clrDgItems="let r of (rates$ | async)?.rates | keyvalue">
+    <clr-dg-row *clrDgItems="let r of (rates$ | async)?.rates | keyvalue">
       <clr-dg-cell>{{r.key}}</clr-dg-cell>
       <clr-dg-cell>{{r.value | currency:r.key}}</clr-dg-cell>
-  </clr-dg-row>
+    </clr-dg-row>
 
-  <clr-dg-footer>
-    <clr-dg-pagination #pagination [clrDgPageSize]="10">
+    <clr-dg-footer>
+      <clr-dg-pagination #pagination [clrDgPageSize]="10">
         {{pagination.firstItem + 1}} - {{pagination.lastItem + 1}}
         of {{pagination.totalItems}} rates
-    </clr-dg-pagination>
-  </clr-dg-footer>
+      </clr-dg-pagination>
+    </clr-dg-footer>
 
-</clr-datagrid>
+  </clr-datagrid>
+</div>

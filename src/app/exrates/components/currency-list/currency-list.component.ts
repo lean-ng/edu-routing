@@ -23,7 +23,7 @@ export class CurrencyListComponent implements OnInit {
         console.log(this.selectedCurrency);
         return this.api.getCurrencies();
       })
-    )
+    );
   }
 
 }
