@@ -12,6 +12,7 @@ import { AboutComponent } from './core/components/about/about.component';
 import { NotFoundComponent } from './core/components/not-found/not-found.component';
 import { ExratesModule } from './exrates/exrates.module';
 import { LogOnComponent } from './core/components/log-on/log-on.component';
+import { CrisisCenterModule } from './crisis-center/crisis-center.module';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { LogOnComponent } from './core/components/log-on/log-on.component';
     ClarityModule,
     BrowserAnimationsModule,
     ExratesModule,
+    CrisisCenterModule,
     AppRoutingModule,
   ],
   providers: [],
