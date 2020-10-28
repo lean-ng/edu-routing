@@ -3,11 +3,13 @@ import { Route, RouterModule } from '@angular/router';
 
 import { AboutComponent } from './core/components/about/about.component';
 import { HomeComponent } from './core/components/home/home.component';
+import { LogOnComponent } from './core/components/log-on/log-on.component';
 import { NotFoundComponent } from './core/components/not-found/not-found.component';
 
 const appRoutes: Route[] = [
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
+  { path: 'login', component: LogOnComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: NotFoundComponent },
 ];
