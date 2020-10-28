@@ -1,4 +1,7 @@
-<h2>Current Rates for {{ currency$ | async }} ({{ (rates$ | async)?.date | date }})</h2>
+<header>
+  <h2>Current Rates for {{ currency$ | async }} ({{ (rates$ | async)?.date | date }})</h2>
+  <a (click)="gotoList()" class="btn btn-primary">Back</a>
+</header>
 <clr-datagrid>
   <clr-dg-column [clrDgField]="'key'">Currency</clr-dg-column>
   <clr-dg-column [clrDgField]="'value'">Rate</clr-dg-column>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map, switchMap } from 'rxjs/operators';
 import { RatesResponse } from '../../model/rates-response.interface';
@@ -18,6 +18,7 @@ export class CurrencyRatesComponent implements OnInit {
   constructor(
     private api: RatesAPIService,
     private route: ActivatedRoute,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -29,4 +30,7 @@ export class CurrencyRatesComponent implements OnInit {
     );
   }
 
+  gotoList(): void {
+    this.router.navigate(['/exrates/currencies']);
+  }
 }
