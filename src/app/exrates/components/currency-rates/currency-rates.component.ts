@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import { map, switchMap } from 'rxjs/operators';
+import { map, switchMap, tap } from 'rxjs/operators';
 import { RatesResponse } from '../../model/rates-response.interface';
 import { RatesAPIService } from '../../rates-api.service';
 
@@ -12,7 +12,7 @@ import { RatesAPIService } from '../../rates-api.service';
 })
 export class CurrencyRatesComponent implements OnInit {
 
-  currency$: Observable<string>;
+  currency: string;
   rates$: Observable<RatesResponse>;
 
   constructor(
@@ -22,15 +22,14 @@ export class CurrencyRatesComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.currency$ = this.route.paramMap.pipe(
-      map(params => params.get('currency'))
-    );
-    this.rates$ = this.currency$.pipe(
+    this.rates$ = this.route.paramMap.pipe(
+      map(params => params.get('currency')),
+      tap(currency => this.currency = currency),
       switchMap(currency => this.api.getRates(currency))
     );
   }
 
   gotoList(): void {
-    this.router.navigate(['/exrates/currencies']);
+    this.router.navigate(['/exrates/currencies', { last: this.currency}]);
   }
 }
